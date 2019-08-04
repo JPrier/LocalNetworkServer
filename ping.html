@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title> Ping Test </title>
+  </head>
+
+  <body>
+
+    <section>
+        <form method=post>
+          {% if google == True %}
+            <h3 class="ping success"> Google: Success <h3>
+          {% else %}
+            <h3 class="ping fail"> Google: Failure <h3>
+          {% endif %}
+        </form>
+        <form action="/do_ping_test" method="post">
+          <button name="pingBtn" type="submit">Run Ping Test</button>
+        </form>
+    </section>
+
+  </body>
